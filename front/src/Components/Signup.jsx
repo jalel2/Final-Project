@@ -6,7 +6,7 @@ import API from '../Utils/api.js'
 
 const Signup = () => {
     const navigate = useNavigate();
-    const [data, setData] = useState({
+    const [mydata, setData] = useState({
         name: "",
         lastName: "",
         email: "",
@@ -14,22 +14,23 @@ const Signup = () => {
     })
     const handleChange = (e) => {
         setData({
-            ...data,
+            ...mydata,
             [e.target.name]: e.target.value
         })
     }
-    const handleSubmit = async () => {
-        if (!isEmailValid(data.email)) {
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        if (!isEmailValid(mydata.email)) {
             alert("Invalid email format");
             return;
         }
-        if (!isPassValid(data.password)) {
+        if (!isPassValid(mydata.password)) {
             alert("Password must be at least 8 characters long, include uppercase, lowercase, a number, and a special character.");
             return;
         }
-        console.log("Valid data", data);
+        console.log("Valid data", mydata);
         try {
-            const res = await API.post('/auth/signup', data);
+            const res = await API.post('/auth/signup', mydata);
             if(res.status !== 200) {
                 console.log("Error in signup:", res.data.message);
             }
@@ -42,7 +43,7 @@ const Signup = () => {
             
 
           } catch (err) {
-            console.error('signup error:', err.response.data.message);
+            console.log('signup error:', err.response?.data?.message || err.message);
           }
     }
     return (
