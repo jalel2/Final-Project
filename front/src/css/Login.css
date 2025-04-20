@@ -1,0 +1,60 @@
+body {
+  
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+    height: 100vh; /* Prend toute la hauteur de la fenêtre */
+    margin: 0; /* Supprime les marges par défaut */
+    font-family: Arial, sans-serif; /* Police de caractères */
+}
+
+form {
+    width: 300px; /* Largeur du formulaire */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fond semi-transparent */
+    box-shadow: 0 0 10px rgba(15, 27, 17, 0.1); /* Ombre légère */
+}
+
+h3 {
+    text-align: center; /* Centre le titre */
+    margin-bottom: 20px; /* Espace sous le titre */
+    color: #333; /* Couleur du texte */
+    background-size: 100% 124%; 
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.9); /* Champs semi-transparents */
+    font-size: 1em;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #267abe;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #004080; /* Changement de couleur au survol */
+}
+a{
+    color: #4c718f;
+    text-decoration: none;
+}
+a:hover{text-decoration: underline;}
+p{
+    text-align: center;
+    color: #333;
+    background-size: 100% 124%;
+}

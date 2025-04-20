@@ -1,0 +1,514 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #4a4a4a;
+  background-color: #f8f9fa;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;             
+  z-index: 100;
+ 
+}
+
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  color: #7eb8da;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 30px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+nav ul li a:hover {
+  color: #7eb8da;
+}
+
+nav ul li a.active {
+  background-color: #e1f1fa;
+  color: #5a9bc0;
+}
+
+/* Hero section */
+.hero {
+  background-color: #e1f1fa;
+  padding: 100px 20px;
+  text-align: center;
+  background-image: linear-gradient(to bottom right, #e1f1fa, #d4e6f1);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: #5a9bc0;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+/* Button styles */
+.btn-primary {
+  background-color: #7eb8da;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #5a9bc0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary {
+  background-color: #a8d8b9;
+  color: #0a2d25;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-secondary:hover {
+  background-color: #8bc8a8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Relaxation intro section */
+.relaxation-intro {
+  padding: 80px 0;
+  background-color: #fff;
+  text-align: center;
+}
+
+.relaxation-intro h2 {
+  color: #5a9bc0;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.relaxation-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Resources section */
+.resources {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.resources h2 {
+  text-align: center;
+  color: #5a9bc0;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.resource-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  width: calc(50% - 15px);
+  max-width: 500px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.card-image.meditation {
+  background-color: #1e6a90;
+}
+
+.card-image.breathing {
+  background-color: #a8d8b9;
+}
+
+.card-image.nature {
+  background-color: #1d345a;
+}
+
+.card-image.yoga {
+  background-color: #fdebd0;
+}
+
+.card h3 {
+  color: #5a9bc0;
+  padding: 20px 20px 10px;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  color: #666;
+}
+
+.resource-link {
+  display: inline-block;
+  margin: 0 20px 20px;
+  color: #5a9bc0;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.resource-link:hover {
+  color: #7eb8da;
+  text-decoration: underline;
+}
+
+/* Daily practice section */
+.daily-practice {
+  padding: 80px 0;
+  background-color: #fff;
+}
+
+.daily-practice h2 {
+  text-align: center;
+  color: #5a9bc0;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.practice-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.practice-content {
+  flex: 1;
+}
+
+.practice-content h3 {
+  color: #5a9bc0;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.practice-content p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.practice-content ol {
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.practice-content li {
+  margin-bottom: 10px;
+  color: #666;
+}
+
+.practice-image {
+  flex: 1;
+  height: 350px;
+  background-color: #e1f1fa;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+/* Testimonials section */
+.testimonials {
+  padding: 80px 0;
+  background-color: #e1f1fa;
+}
+
+.testimonials h2 {
+  text-align: center;
+  color: #5a9bc0;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+.testimonial-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  width: calc(50% - 15px);
+  max-width: 500px;
+}
+
+.testimonial p {
+  font-style: italic;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.testimonial-author {
+  font-weight: 600;
+  color: #5a9bc0;
+}
+
+/* CTA section */
+.cta {
+  background-color: #a8d8b9;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.cta h2 {
+  color: #2c6e49;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+.cta p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  color: #2c6e49;
+}
+
+/* Footer */
+footer {
+  background-color: #5a9bc0;
+  color: #fff;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-links h4, .footer-newsletter h4 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-newsletter p {
+  margin-bottom: 15px;
+  color: rgba(252, 252, 252, 0.8);
+}
+
+.newsletter-form {
+  display: flex;
+}
+
+.newsletter-form input {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  width: 200px;
+}
+
+.newsletter-form button {
+  background-color: #80c4e4; /* bleu clair */
+  color: white; /* couleur du texte */
+  padding: 12px 24px; /* espace intérieur */
+  border: none;
+  border-radius: 25px; /* bords arrondis */
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* si c'est un <a> */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* ombre douce */
+
+}
+
+.newsletter-form button:hover {
+  background-color: #a8d8b9;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .card {
+      width: 100%;
+  }
+  
+  .practice-container {
+      flex-direction: column;
+  }
+  
+  .testimonial {
+      width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul li {
+      margin-left: 15px;
+  }
+  
+  .hero-content h1 {
+      font-size: 2rem;
+  }
+  
+  .footer-content {
+      flex-direction: column;
+      gap: 30px;
+  }
+  
+  .footer-logo, .footer-links, .footer-newsletter {
+      width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  nav ul li a {
+      padding: 8px 10px;
+      font-size: 0.9rem;
+  }
+  
+  .btn-primary, .btn-secondary {
+      padding: 10px 20px;
+  }
+}
+
+.card-image.meditation {
+  background-image: url('../');
+}
+.card-image.meditation{
+  background-image: url('../image/relax.jpg');
+}
+.card-image.breathing {
+  background-image: url('../image/breath.jpg');
+}
+
+.card-image.nature {
+  background-image: url('../image/sons.jpg');
+}
+
+.card-image.yoga {
+  background-image: url('../image/yoga.jpg');
+}
+
+.card-image {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Image de la pratique quotidienne */
+.practice-image {
+  background-image: url('../image/r.jpg');
+ 
+}
+.footer-bottom p {
+  color: #fff; 
+}
+
+.footer-logo h3 {
+  color: #fff; 
+} 
+
