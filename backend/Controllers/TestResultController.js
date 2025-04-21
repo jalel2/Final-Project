@@ -8,7 +8,30 @@ const analyzeMood = (score) => {
     if (score <= 20) return { category: 'Severe Distress', label: 'sad' };
     return { category: 'Critical Alert', label: 'angry' };
 };
-
+export const analyzeMD = async (req, res) => {
+    try {
+        const { userId,score } = req.body;
+        const {category,label} = analyzeMood(score);
+        const user = await User.findById(userId);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found.' });
+        }
+        const testResult = new TestResult({
+            userId: user._id,
+            name: `${user.name} ${user.lastName}`,
+            totalScore: score,
+            moodCategory: category,
+            moodLabel: label
+        });
+        await testResult.save();
+        res.status(200).json({ label });
+        
+    } catch (error) {
+        console.error('Error analyzing mood:', error);
+        res.status(500).json({ message: 'Failed to analyze mood' });
+        
+    }
+}
 export const analyzeScores = async (req, res) => {
     try {
         const { userId, answers } = req.body;

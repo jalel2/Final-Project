@@ -11,6 +11,10 @@ import cors from 'cors';
 dotenv.config();
 
 const app = express();
+app.use(cors({
+    origin: 'http://localhost:3000',
+    credentials:true
+}));
 
 app.use(express.json())
 
@@ -18,10 +22,7 @@ app.use(express.json())
 app.use('/api/auth', authRoute);
 app.use('/api/questions', QuestionRouter);
 app.use('/api/results', ResultRouter);
-app.use(cors({
-    origin: 'http://localhost:3000',
-    credentials:true
-}));
+
 
 
 // Start the server

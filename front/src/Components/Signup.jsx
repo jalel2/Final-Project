@@ -31,14 +31,14 @@ const Signup = () => {
         console.log("Valid data", mydata);
         try {
             const res = await API.post('/auth/signup', mydata);
-            if(res.status !== 200) {
+            if(res.status !== 201) {
                 console.log("Error in signup:", res.data.message);
             }
-            if(res.status === 200) {
+            if(res.status === 201) {
                 console.log("Signup successful:");
                 localStorage.setItem('token', res.data.token);
                 console.log('signup success:', res.data.user);
-                navigate('/dashboard'); // Navigate to a dashboard or another page after successful signup
+                navigate('/test'); // Navigate to a dashboard or another page after successful signup
             }
             
 

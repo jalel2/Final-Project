@@ -7,6 +7,7 @@ import Auth from './Pages/Auth';
 import Login from './Components/Login'
 import Signup from './Components/Signup'
 import AdminDashboard from './Components/AdminDashboard';
+import Test from './Components/Test';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
             </Route>
             
             <Route path="admin" element={<AdminDashboard />} />
-           
+            <Route path="/test" element={<Test />} />
           </Routes>
         
       </div>

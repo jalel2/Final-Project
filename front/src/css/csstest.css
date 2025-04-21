@@ -1,0 +1,104 @@
+
+  .body {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+ .test-form {
+    width: 1200px; 
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8); 
+    
+}
+
+  
+  .test-page .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo h1 {
+    color: #5a9bc0;
+    font-size: 28px;
+    margin: 0;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .nav-links .active {
+    background-color: #d7eaf6;
+    padding: 6px 12px;
+    border-radius: 12px;
+  }
+  .test-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+ 
+  .test-container h2 {
+    color: #649dbe;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .test-form .question-block {
+    margin-bottom: 30px;
+  }
+  
+  .test-form .question-block h4 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .test-form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .test-form input[type="radio"] {
+    margin-right: 10px;
+  }
+  
+  .button-group {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .button-group button {
+    padding: 12px 25px;
+    margin: 0 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .button-group button:first-child {
+    background-color: #5a9bc0;
+    color: white;
+  }
+  
+  .button-group button:last-child {
+    background-color: #ccc;
+    color: #333;
+  }
+  
